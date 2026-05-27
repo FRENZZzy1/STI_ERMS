@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2026 at 03:25 PM
+-- Generation Time: May 27, 2026 at 03:35 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -318,7 +318,8 @@ INSERT INTO `users` (`user_id`, `username`, `password`, `role`, `status`, `creat
 (69, 'ocay', '$2y$10$gfC/RIofaH4XGu48Do/0lO6CgR/RtI7X/ADdKL6S3pskV7lNrhWGm', 'Staff', 'Online', '2025-11-15 04:47:42'),
 (76, 'Allen', '$2y$10$fnlD00fRZ9nhQNcviA/WA.ynKZNUMCYnN4fRmvlBBMqsCriCyjfa2', 'admin', 'offline', '2026-02-16 05:16:36'),
 (77, 'Paller', '$2y$10$nID/0kkF9VPkNan9KxhIJeTf23sIsY19mzTgWJtobLqj0usXO.8My', 'admin', 'offline', '2026-05-19 03:14:45'),
-(79, 'User', '$2y$10$l/HWqAwGW.xDzNwhS3ynFOqlvweT9QqUX3kIyNZd.t2GXYgjp5nLG', 'maintenance', 'Online', '2026-05-19 03:16:11');
+(79, 'User', '$2y$10$l/HWqAwGW.xDzNwhS3ynFOqlvweT9QqUX3kIyNZd.t2GXYgjp5nLG', 'maintenance', 'Online', '2026-05-19 03:16:11'),
+(80, 'admin', '$2y$10$GsVaeReHsqgJrqAOn5mSFujUfHIQs/RRZPgjEV0Ot9TZ7KAo6xrQ.', 'admin', 'Online', '2026-05-27 13:33:37');
 
 --
 -- Indexes for dumped tables
@@ -407,7 +408,7 @@ ALTER TABLE `reports`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- Constraints for dumped tables
