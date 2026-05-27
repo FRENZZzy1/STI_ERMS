@@ -1,0 +1,3 @@
+-Import the sti_erms.sql in xampp mysql
+-clone the project inside the htdocs of xammp folder
+-admin crdentials: user:admin pass:admin123
