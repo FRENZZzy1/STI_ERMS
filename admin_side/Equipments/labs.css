@@ -1,0 +1,393 @@
+
+  :root {
+    --primary: #0f66c3;
+    --primary-light: #e7f1fb;
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --muted: #555;
+    --shadow: rgba(16, 24, 40, 0.08);
+    --success: #16a34a;
+  }
+ 
+  * {
+    box-sizing: border-box;
+  }
+ 
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #e8e8e4, #d8e2dc, #ece4db);
+    color: #222;
+  }
+ 
+  .main-content {
+    margin-left: 250px;
+    padding: 50px;
+    min-height: 100vh;
+  }
+ 
+  .container {
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+ 
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+ 
+  h1 {
+    font-size: 38px;
+    color: var(--primary);
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+  }
+ 
+  .btn {
+    border: 0;
+    background: var(--primary);
+    color: #fff;
+    padding: 14px 26px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.2s ease;
+  }
+ 
+  .btn:hover {
+    background: #0c57a4;
+  }
+ 
+  /* ✅ Equal grid for cards */
+  .lab-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 34px;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+ 
+  .lab-card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 34px 28px;
+    box-shadow: 0 8px 22px var(--shadow);
+    transition: all 0.25s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 6px solid var(--primary-light);
+    min-height: 300px;
+  }
+ 
+  .lab-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 16px 32px rgba(16, 24, 40, 0.18);
+    border-top-color: var(--primary);
+  }
+ 
+  /* ✅ Improved arrangement inside card */
+  .lab-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+ 
+  .lab-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+ 
+  .lab-title i {
+    font-size: 28px;
+  }
+ 
+  .lab-location {
+    font-size: 18px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+ 
+  .lab-location i {
+    font-size: 16px;
+    opacity: 0.8;
+  }
+ 
+  /* ✅ bottom stats section */
+  .lab-footer {
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  .badge {
+    background: var(--success);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+ 
+  .badge i {
+    font-size: 18px;
+  }
+ 
+  .view-text {
+    font-size: 17px;
+    color: var(--primary);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    background: var(--primary-light);
+    padding: 8px 14px;
+    border-radius: 10px;
+  }
+ 
+  .view-text:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+ 
+  .view-text i {
+    font-size: 16px;
+  }
+ 
+  .no-labs {
+    background: var(--card);
+    padding: 60px;
+    border-radius: 18px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 20px;
+    box-shadow: 0 6px 18px var(--shadow);
+    width: 100%;
+  }
+ 
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 0;
+      padding: 20px;
+    }
+ 
+    .lab-card {
+      min-height: 260px;
+      padding: 24px;
+    }
+ 
+    .lab-title {
+      font-size: 22px;
+    }
+ 
+    .lab-location {
+      font-size: 16px;
+    }
+  }
+
+ /* ========== DARK MODE (Clean Charcoal Theme) ========== */
+body.dark-mode {
+  background-color: #000000;
+  color: #e6e6e6;
+}
+
+/* Main content background */
+body.dark-mode .main-content {
+  background-color: #000000;
+}
+
+/* Cards */
+body.dark-mode .lab-card {
+  background-color: #16181c;       /* charcoal card */
+  color: #f1f1f1;
+  border-top-color: #3a3d42;       /* neutral accent */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .lab-card:hover {
+  border-top-color: #5a5e65;       /* slightly brighter on hover */
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.55);
+}
+
+/* Text inside cards */
+body.dark-mode .lab-title,
+body.dark-mode .lab-location,
+body.dark-mode .lab-footer,
+body.dark-mode .badge {
+  color: #f1f1f1;
+}
+
+/* Badges */
+body.dark-mode .badge {
+  background: #198138;   /* success badge stays green */
+  color: #fff;
+}
+
+/* View button inside cards */
+body.dark-mode .view-text {
+  background: #303236;
+  color: #d1d1d1;
+}
+
+body.dark-mode .view-text:hover {
+  background: #45484d;
+  color: #fff;
+}
+
+/* Buttons */
+body.dark-mode .btn {
+  background-color: #3a3d42;
+  color: #fff;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #4a4d53;
+}
+
+/* No labs message */
+body.dark-mode .no-labs {
+  background-color: #25262a;
+  color: #e7e7e7;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+/* Modal */
+body.dark-mode .modal {
+  background-color: rgba(0,0,0,0.65);
+}
+
+body.dark-mode .modal-content {
+  background: #25262a;
+  color: #e6e6e6;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .close-btn {
+  color: #c9c9c9;
+}
+
+body.dark-mode .modal-content h2 {
+  color: #d2d2d2;
+}
+
+body.dark-mode .modal-content form label {
+  color: #e6e6e6;
+}
+
+body.dark-mode .modal-content form input,
+body.dark-mode .modal-content form select {
+  background: #1f2023;
+  border: 1px solid #3a3d42;
+  color: #e6e6e6;
+}
+
+body.dark-mode .modal-content form button {
+  background: #3a3d42;
+  color: white;
+}
+
+body.dark-mode .modal-content form button:hover {
+  background: #4a4d53;
+}
+
+
+
+/* ✅ Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  .modal-content h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+  }
+  
+  .modal-content form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+  }
+  
+  .modal-content form input,
+  .modal-content form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  
+  .modal-content form button {
+    background: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .modal-content form button:hover {
+    background: #0c57a4;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  

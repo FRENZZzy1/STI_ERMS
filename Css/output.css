@@ -1,0 +1,177 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #f0f4ff, #e2ebff);
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* ===== USER INFO ===== */
+  .user-info {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 20px;
+    text-align: right;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* ===== CONTAINER & CARD ===== */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    padding: 20px;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card h2 {
+    text-align: center;
+    color: #1a73e8;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+  }
+  
+  /* ===== INFO BOXES ===== */
+  .info {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+  }
+  
+  .info label {
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .info span {
+    color: #222;
+    text-align: right;
+  }
+  
+  .status {
+    font-weight: 600;
+    color: #1a73e8;
+  }
+  
+  /* ===== BUTTONS ===== */
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .btn {
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    width: 48%;
+  }
+  
+  .btn.back {
+    background: #e0e0e0;
+    color: #333;
+  }
+  
+  .btn.back:hover {
+    background: #cfd8dc;
+  }
+  
+  .btn.report-btn {
+    background: #1a73e8;
+    color: white;
+  }
+  
+  .btn.report-btn:hover {
+    background: #0c5bdc;
+  }
+  
+  /* ===== REPORT FORM ===== */
+  .report-form {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f8f9ff;
+    border: 1px solid #d6dcff;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .report-form label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .report-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+  }
+  
+  .btn.submit {
+    width: 100%;
+    background: #1a73e8;
+    color: white;
+    margin-top: 15px;
+  }
+  
+  .btn.submit:hover {
+    background: #0c5bdc;
+  }
+  
+  /* ===== ALERTS ===== */
+  .alert {
+    margin: 10px auto;
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .alert.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .alert.error {
+    background: #ffebee;
+    color: #c62828;
+  }
+  
+  .alert.warning {
+    background: #fff8e1;
+    color: #f57f17;
+  }
+  
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
